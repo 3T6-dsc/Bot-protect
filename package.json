@@ -1,0 +1,14 @@
+{
+  "name": "aloria-protect",
+  "version": "1.0.0",
+  "description": "Bot de protection Discord",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "deploy": "node deploy-commands.js"
+  },
+  "dependencies": {
+    "discord.js": "^14.11.0",
+    "dotenv": "^16.0.3"
+  }
+}
