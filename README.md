@@ -34,7 +34,7 @@ git clone https://github.com/3T6-dsc/Bot-protect.git
 npm install
 ```
 
-3. Configurez le fichier `.env` avec vos informations
+3. Renommez le fichier `example.env` en `.env` et configurez vos informations
 ```env
 TOKEN=votre_token_ici
 CLIENT_ID=ID_DU_BOT
@@ -99,3 +99,4 @@ Ce projet est sous licence MIT - voir le fichier [LICENSE](LICENSE) pour plus de
 ## ⚠️ Support
 
 Pour obtenir de l'aide ou signaler un bug, veuillez ouvrir une issue sur GitHub.
+
