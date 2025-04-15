@@ -1,13 +1,20 @@
-# Anti Channel Bot
+# Discord Protection Bot
 
-Un bot Discord conçu pour protéger les serveurs contre la création massive de salons.
+Un bot Discord conçu pour protéger les serveurs contre la création massive de salons et la gestion non autorisée des rôles.
 
 ## 🌟 Fonctionnalités
 
-- Protection contre la création massive de salons
+### Protection Anti-Channel
+- Surveillance de la création de salons
 - Système d'autorisation pour les utilisateurs de confiance
-- Configuration simple via fichier JSON
+- Protection contre la création massive de salons
 - Réponse rapide aux tentatives de raid
+
+### Protection Anti-Rôle
+- Surveillance des modifications de rôles
+- Liste blanche d'utilisateurs autorisés
+- Protection contre l'attribution non autorisée de rôles
+- Annulation automatique des modifications non autorisées
 
 ## 📋 Prérequis
 
@@ -19,7 +26,7 @@ Un bot Discord conçu pour protéger les serveurs contre la création massive de
 
 1. Clonez le repository
 ```bash
-git clone [URL_DU_REPO]
+git clone https://github.com/3T6-dsc/Bot-protect.git
 ```
 
 2. Installez les dépendances
@@ -27,9 +34,10 @@ git clone [URL_DU_REPO]
 npm install
 ```
 
-3. Configurez le fichier `.env` avec votre token Discord
+3. Configurez le fichier `.env` avec vos informations
 ```env
 TOKEN=votre_token_ici
+CLIENT_ID=ID_DU_BOT
 ```
 
 4. Démarrez le bot
@@ -39,7 +47,8 @@ npm start
 
 ## ⚙️ Configuration
 
-Le fichier `config/antichannel.json` permet de gérer les utilisateurs autorisés :
+### Anti-Channel
+Le fichier `config/antichannel.json` permet de gérer les utilisateurs autorisés à créer des salons :
 ```json
 {
   "utilisateursAutorises": [
@@ -48,6 +57,29 @@ Le fichier `config/antichannel.json` permet de gérer les utilisateurs autorisé
   ]
 }
 ```
+
+### Anti-Rôle
+Le fichier `config/antirole.json` permet de gérer les utilisateurs autorisés à modifier les rôles :
+```json
+{
+  "utilisateursAutorises": [
+    "ID_UTILISATEUR_1",
+    "ID_UTILISATEUR_2"
+  ]
+}
+```
+
+## 🛠️ Commandes
+
+### Commandes Anti-Channel
+- `/antichannel ajouter` - Ajoute un utilisateur à la liste des autorisations
+- `/antichannel retirer` - Retire un utilisateur de la liste des autorisations
+- `/antichannel liste` - Affiche la liste des utilisateurs autorisés
+
+### Commandes Anti-Rôle
+- `/antirole ajouter` - Ajoute un utilisateur à la liste des autorisations
+- `/antirole retirer` - Retire un utilisateur de la liste des autorisations
+- `/antirole liste` - Affiche la liste des utilisateurs autorisés
 
 ## 📦 Dépendances principales
 
