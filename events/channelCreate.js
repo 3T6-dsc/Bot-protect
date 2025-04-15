@@ -14,8 +14,8 @@ async function readConfig() {
         console.error('Erreur lors de la lecture de la configuration:', error);
         return {
             utilisateursAutorises: [
-                "1348237994749984808",
-                "1302614774089121875"
+                "ID_UTILISATEUR_1",
+                "ID_UTILISATEUR_2"
             ]
         };
     }
